@@ -14,7 +14,3 @@ for live lectures.
 
 Code snippets can be created and viewed to provide users
 the ability to compare 1 solution in multiple languages.
-
-Roadmap:
-
-[Trello](https://trello.com/b/fwZO4aMV/devry-service-bot)
