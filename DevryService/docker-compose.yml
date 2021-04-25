@@ -4,7 +4,7 @@ services:
      devry-services:
           environment:
                TZ: "America/New_York"
-          image: "tyates2020/Devry-Service-Bot"
+          image: "tyates2020/devry-service-bot"
 #          image: "mercenary9312/unofficial-devry-service-bot"
           restart: "always"
           volumes:
