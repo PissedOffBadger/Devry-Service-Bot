@@ -1,4 +1,4 @@
-﻿using DevryService.Core;
+using DevryService.Core;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.Entities;
 using System;
@@ -100,9 +100,7 @@ namespace DevryService.Wizards
             List<string> courseTypes = roles.Select(x =>x.Name.Trim().Replace("-", " ").Split(" ").First())
                 .Distinct()
                 .ToList();
-            courseTypes.ForEach(i => Console.Write("{0}\t", i));  // DEBUG
-            Console.WriteLine("");  //DEBUG
-            
+
             int count = -1;
             int max = (int) Math.Ceiling((decimal) courseTypes.Count / 25);
             string reply = string.Empty;
@@ -153,6 +151,7 @@ namespace DevryService.Wizards
                         selectedGroups.Add(courseTypes[index], roles.Where(x => x.Name.ToLower().StartsWith(courseTypes[index].ToLower())).ToList());
                 }
             }
+
             int current = 0;
             
             foreach(var key in selectedGroups.Keys)
@@ -163,12 +162,12 @@ namespace DevryService.Wizards
                 {
                     embed.AddField((current + 1).ToString(), item.Name, true);
                     roleMap.Add(current, item);
-                    current++; 
+                    current++;
                 }
 
                 _recentMessage = await SimpleReply(embed.Build(), true, true);
             }
-            
+
             reply = string.Empty;
             var response = await _context.Message.GetNextMessageAsync();
 
