@@ -100,7 +100,8 @@ namespace DevryService.Wizards
             List<string> courseTypes = roles.Select(x =>x.Name.Trim().Replace("-", " ").Split(" ").First())
                 .Distinct()
                 .ToList();
-
+            Console.WriteLine(courseTypes); // DEBUG
+            
             int count = -1;
             int max = (int) Math.Ceiling((decimal) courseTypes.Count / 25);
             string reply = string.Empty;
@@ -151,7 +152,7 @@ namespace DevryService.Wizards
                         selectedGroups.Add(courseTypes[index], roles.Where(x => x.Name.ToLower().StartsWith(courseTypes[index].ToLower())).ToList());
                 }
             }
-
+            Console.WriteLine(selectedGroups.Keys); // DEBUG
             int current = 0;
             
             foreach(var key in selectedGroups.Keys)
@@ -167,7 +168,7 @@ namespace DevryService.Wizards
 
                 _recentMessage = await SimpleReply(embed.Build(), true, true);
             }
-
+            Console.WriteLine(roleMap.Keys); // DEBUG
             reply = string.Empty;
             var response = await _context.Message.GetNextMessageAsync();
 
@@ -212,7 +213,7 @@ namespace DevryService.Wizards
                     }
                 }
             }
-
+            Console.WriteLine(appliedRoles); // DEBUG
             await _context.TriggerTypingAsync();
             await CleanupAsync();
 
