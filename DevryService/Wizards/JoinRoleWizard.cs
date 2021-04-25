@@ -100,7 +100,8 @@ namespace DevryService.Wizards
             List<string> courseTypes = roles.Select(x =>x.Name.Trim().Replace("-", " ").Split(" ").First())
                 .Distinct()
                 .ToList();
-            Console.WriteLine(courseTypes); // DEBUG
+            courseTypes.ForEach(i => Console.Write("{0}\t", i));  // DEBUG
+            Console.WriteLine("");  //DEBUG
             
             int count = -1;
             int max = (int) Math.Ceiling((decimal) courseTypes.Count / 25);
@@ -152,8 +153,13 @@ namespace DevryService.Wizards
                         selectedGroups.Add(courseTypes[index], roles.Where(x => x.Name.ToLower().StartsWith(courseTypes[index].ToLower())).ToList());
                 }
             }
-            Console.WriteLine(selectedGroups.Keys); // DEBUG
             int current = 0;
+            
+            string log = "";  //DEBUG
+            foreach(keyValuePair<string, List<DiscordRole>> kvp in selectedGroups){
+                log += string.Format("Key = {0}, Value = {1}\n", kvp.Key, kvp.Value);
+            }
+            Console.WriteLine(log);  //DEBUG
             
             foreach(var key in selectedGroups.Keys)
             {
@@ -163,12 +169,18 @@ namespace DevryService.Wizards
                 {
                     embed.AddField((current + 1).ToString(), item.Name, true);
                     roleMap.Add(current, item);
-                    current++;
+                    current++; 
                 }
 
                 _recentMessage = await SimpleReply(embed.Build(), true, true);
             }
-            Console.WriteLine(roleMap.Keys); // DEBUG
+            
+            log = "";  //DEBUG
+            foreach(keyValuePair<string, List<DiscordRole>> kvp in roleMap){
+                log += string.Format("Key = {0}, Value = {1}\n", kvp.Key, kvp.Value);
+            }
+            console.WriteLine(log);  //DEBUG
+            
             reply = string.Empty;
             var response = await _context.Message.GetNextMessageAsync();
 
