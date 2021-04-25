@@ -4,7 +4,8 @@ services:
      devry-services:
           environment:
                TZ: "America/New_York"
-          image: "mercenary9312/unofficial-devry-service-bot"
+          image: "tyates2020/Devry-Service-Bot"
+#          image: "mercenary9312/unofficial-devry-service-bot"
           restart: "always"
           volumes:
             - ${PWD}/DevryCommunity.db:/app/DevryCommunity.db
