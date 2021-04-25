@@ -35,7 +35,7 @@ namespace DevryService.Wizards.Admin
         /// Permissions for allowed users/roles
         /// </summary>
         Permissions ALLOWED =
-                Permissions.AccessChannels |
+            Permissions.AccessChannels |
             Permissions.AddReactions |
             Permissions.EmbedLinks |
             Permissions.ReadMessageHistory |
