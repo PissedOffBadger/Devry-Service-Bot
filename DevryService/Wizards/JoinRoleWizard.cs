@@ -155,12 +155,6 @@ namespace DevryService.Wizards
             }
             int current = 0;
             
-            string log = "";  //DEBUG
-            foreach(keyValuePair<string, List<DiscordRole>> kvp in selectedGroups){
-                log += string.Format("Key = {0}, Value = {1}\n", kvp.Key, kvp.Value);
-            }
-            Console.WriteLine(log);  //DEBUG
-            
             foreach(var key in selectedGroups.Keys)
             {
                 var embed = EmbedBuilder().WithFooter(CANCEL_MESSAGE).WithDescription($"Select the number associated with the class(es) you wish to join\n\n{key}:\n");
@@ -174,12 +168,6 @@ namespace DevryService.Wizards
 
                 _recentMessage = await SimpleReply(embed.Build(), true, true);
             }
-            
-            log = "";  //DEBUG
-            foreach(keyValuePair<string, List<DiscordRole>> kvp in roleMap){
-                log += string.Format("Key = {0}, Value = {1}\n", kvp.Key, kvp.Value);
-            }
-            console.WriteLine(log);  //DEBUG
             
             reply = string.Empty;
             var response = await _context.Message.GetNextMessageAsync();
@@ -225,7 +213,7 @@ namespace DevryService.Wizards
                     }
                 }
             }
-            Console.WriteLine(appliedRoles); // DEBUG
+
             await _context.TriggerTypingAsync();
             await CleanupAsync();
 
