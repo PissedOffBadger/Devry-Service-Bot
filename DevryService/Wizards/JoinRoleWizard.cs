@@ -58,6 +58,8 @@ namespace DevryService.Wizards
                 "Content Contributor",
                 "Tutors",
                 "DeVry Alumni"
+                "Senior Moderators"
+                "Junior Moderators"
             };
 
             config.UsesCommand = new WizardToCommandLink
