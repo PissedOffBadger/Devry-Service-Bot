@@ -57,8 +57,8 @@ namespace DevryService.Wizards
                 "@everyone",
                 "Content Contributor",
                 "Tutors",
-                "DeVry Alumni"
-                "Senior Moderators"
+                "DeVry Alumni",
+                "Senior Moderators",
                 "Junior Moderators"
             };
 
