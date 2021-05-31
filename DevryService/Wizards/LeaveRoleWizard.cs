@@ -60,7 +60,7 @@ namespace DevryService.Wizards
             config.AcceptAnyUser = false;
             config.BlacklistedRoles = new string[]
             {
-                "Moderator", "Admin"
+                "Senior Moderators", "Admin", "Junior Moderators"
             };
 
             config.UsesCommand = new WizardToCommandLink

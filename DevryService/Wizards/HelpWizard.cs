@@ -351,7 +351,7 @@ namespace DevryService.Wizards
                     },
                     RestrictedRoles = new List<string>()
                     {
-                        "Moderator","Tutor","Professor","Admin"
+                        "Senior Moderators","Junior Moderators","Tutor","Professor","Admin"
                     }
                 }
             };

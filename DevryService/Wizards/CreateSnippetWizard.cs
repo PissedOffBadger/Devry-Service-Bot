@@ -69,10 +69,11 @@ namespace DevryService.Wizards
         const string REACTION_EMOJI = ":desktop:";
         readonly List<string> RESTRICTED_ROLES = new List<string>()
         {
-            "Moderator",
+            "Senior Moderators",
             "Admin",
             "Tutor",
-            "Professor"
+            "Professor",
+            "Junior Moderators"
         };
 
         public override CommandConfig DefaultCommandConfig()

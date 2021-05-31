@@ -234,7 +234,7 @@ namespace DevryService.Wizards.Admin
                 IgnoreHelpWizard = false,
                 RestrictedRoles = new List<string>() 
                 { 
-                    "Moderator", 
+                    "Senior Moderators", 
                     "Admin" 
                 }
             };
