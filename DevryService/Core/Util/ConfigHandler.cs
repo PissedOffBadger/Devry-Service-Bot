@@ -273,11 +273,11 @@ namespace DevryService.Core.Util
             MessageConfig config = FindConfig<MessageConfig>("view-welcome");
 
             string contents = $"Welcome, [USER], to the Unofficial DeVry IT Discord! A community-built by students to help foster education and professional growth; please " +
-                $"introduce yourself in the #welcome-page channel and join our main discussions in the #main-hub-general. \n\n" +
+                $"introduce yourself in the #welcome-page channel and join our main discussions in the #main-hub-general . \n\n" +
                 $"You can find your fellow classmates 1 of 3 ways. \n" +
                 $"1.) Utilize the `!help` command, then react to the appropriate emoji\n" +
                 $"2.) Utilize the `!join` command to bypass the `help` wizard.\n" +
-                $"3.) Inform us which classes you're in, a @Moderator will gladly assist you.\n\n" +
+                $"3.) Inform us which classes you're in, a Junior or Senior Moderator will gladly assist you.\n\n" +
                 $"Thanks, and welcome to the Unofficial DeVry IT Discord!";
 
             if (config == null)
