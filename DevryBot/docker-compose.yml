@@ -1,10 +1,16 @@
 ﻿version: "3.8"
 
+volumes:
+     devrydata:
+       name: devry_devry-services
+
 services:
      devry-services:
+          container_name: DeVryBot
+          hostname: devrybot_host
           environment:
                TZ: "America/New_York"
           image: "mercenary9312/unofficial-devry-service-bot"
           restart: "always"
           volumes:
-            - ${PWD}/data/:/app/data
+            - devrydata:/app/Data:rw
