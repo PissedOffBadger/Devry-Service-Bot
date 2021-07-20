@@ -2,6 +2,6 @@
   "WelcomeSettings": {
     "InviteWelcomeDuration": 3,
     "WelcomeMessageInterval": 30,
-    "WelcomeMessage": "Welcome, [USERS], to the Unofficial DeVry IT Discord! A community built by students to help foster educational and professional growth; please introduce yourself in the #welcome-page channel and join our main discussions in the #main-hub-general.\n\nYou can find your fellow classmates 1 of 2 ways.\n1.) Utilize the `/join` command. It behaves almost like Google. Type in a class or course you're looking for and it'll display results via a dropdown menu\n2.) Inform a moderator which classes you're in.\n\nThanks, and welcome to the Unofficial DeVry IT Discord!",
+    "WelcomeMessage": "Welcome, [USERS], to the Unofficial DeVry IT Discord! A community built by students to help foster educational and professional growth; please introduce yourself in the #welcome-page channel and join our main discussions in the #main-hub-general .\n\nYou can find your fellow classmates 1 of 2 ways.\n1.) Utilize the `/join` command. It behaves almost like Google. Type in a class or course you're looking for and it'll display results via a dropdown menu\n2.) Inform a moderator which classes you're in.\n\nThanks, and welcome to the Unofficial DeVry IT Discord!",
   }
 }
